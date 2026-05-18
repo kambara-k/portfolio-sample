@@ -1,0 +1,180 @@
+<!-- ドキュメントタイプ宣言（HTML5であることを示す） -->
+<!doctype html>
+<html lang="ja">
+    <head>
+		<!-- 文字コードをUTF-8に設定 -->
+        <meta charset="utf-8" />
+        
+        <!-- ブラウザのタブに表示されるタイトル -->
+        <title>My Portfolio</title>
+        
+        <!-- 検索エンジン向けのページ説明 -->
+        <meta
+            name="description"
+            content="Webエンジニアのポートフォリオサイトです。スキルや制作実績を掲載しています。"
+        />
+        
+        <!-- レスポンシブ対応（スマホでも適切なサイズで表示） -->
+        <!-- 画面の横幅を「端末の幅」に合わせ、ページの初期ズーム倍率を「100%」にする -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- リセットCSS（ブラウザごとの差を減らすため） -->
+		<!-- 外部のCSSファイル（Ress）を読み込むためのコード -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        
+        <!-- Google Fonts への接続を高速化 -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        
+        <!-- フォントデータ配信サーバーへの接続を高速化 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        
+        <!-- Philosopher フォントを読み込み -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap"
+            rel="stylesheet"
+        />
+        
+        <!-- 自作CSSファイルを読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+		
+ <!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+		<!-- トップページのカバーエリア -->
+        <div class="cover-home">
+			<!-- ヘッダー -->
+            <header class="page-header wrapper">
+				<!-- サイトタイトル -->
+                <h1 class="align-center">
+					
+					<!-- ロゴ兼トップページリンク -->
+                    <a href="index.html" class="logo-text font-english"
+                        >My Portfolio</a
+                    >
+                </h1>
+                
+                <!-- ナビゲーションメニュー -->
+                <nav>
+                    <ul class="main-nav font-english">
+						<!-- ホームへのリンク -->
+                        <li><a href="index.html">Home</a></li>
+                        <!-- 制作実績ページへのリンク -->
+                        <li><a href="works.html">Works</a></li>
+                        <!-- ブログページへのリンク -->
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <!-- メインキャッチコピー -->
+            <h2 class="page-title font-english">Hello, World.</h2>
+        </div>
+
+ <!-- ―――――――――――――― About me ―――――――――――――― -->
+
+		<!-- About セクション -->
+        <section class="about">
+			
+			<!-- セクション見出し -->
+            <h3 class="heading-large font-english">About Me</h3>
+            
+            <!-- 左右レイアウト --> 
+            <div class="about-container"> 
+			
+			<!-- 左側：自己紹介 --> 
+			<div class="about-text">
+				<p> IT未経験の中途入社組です。
+					大学は文系で法律を専攻していました。
+					 </p>  
+				<p> 前職では、公務員として役所の生活保護業務を担当していました。 <br>
+					ケースワーカーとして相談支援や事務処理など様々な経験をさせて
+					いただき、新卒後２年間勤務していました。
+					 </p> 
+
+				<p>
+					<ul>
+						IT業界に転職した理由は、主に以下の３点です。
+					    <li>パソコンが好きだから</li>
+					    <li>IT分野に興味があったから</li>
+					    <li>趣味でもIT技術に触れていたから（Worksに一部載せています。）</li>
+					</ul>
+				</p>
+				<p>	毎日継続して学習することを意識し、「基礎技術の早期習得」及び<br>
+					「資格の取得」に取り組んでいます。 
+					</p> 
+			</div>
+            
+            <!-- 右側：プロフィールカード -->
+			<!-- プロフィール情報のエリア -->
+			<section class="profile">
+
+				<!-- プロフィールカード全体 -->
+				<div class="profile-card">
+												
+					<div class="profile-item">
+         				<span class="label">採用</span>
+        				<span class="value">キャリア採用（中途）</span>
+					</div>
+
+     			  	<div class="profile-item">
+      			  	    <span class="label">前職</span>
+       			  	   	<span class="value">公務員（生活保護担当）</span>
+     			  	</div>
+     			  	
+     			  	<div class="profile-item">
+      			  	    <span class="label">保有資格</span>
+       			  	   	<span class="value">行政書士 / 基本情報技術者 /ITパスポート</span>
+     			  	</div>
+
+     			 	<div class="profile-item">
+      			  	    <span class="label">年齢</span>
+      			 	     <span class="value">24歳（2001年生）</span>
+    			 	</div>
+
+     				<div class="profile-item">
+       				     <span class="label">趣味</span>
+          				 <span class="value">Youtube / ゲーム / 漫画・アニメ / カラオケ</span>
+       				</div>
+       			</div>
+  
+  				<!-- ボタングループ -->
+            	<div class="btn-group">
+					<a class="btn" href="works.html">
+					制作実績を見る（Works）
+					</a>
+
+					<a class="btn" href="blog.html">
+        			備忘録を見る（Blog）
+					</a>
+				 </div>
+			</section>
+			</div>
+		</section>
+        
+  <!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+    </body>
+</html>

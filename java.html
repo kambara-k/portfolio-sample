@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>Java 学習記録</title>
+        
+	    <meta
+			name="description"
+			content="Java の学習内容をまとめたページです。"
+			 />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/ress/dist/ress.min.css"
+			/>
+			
+		        <!-- 自作CSSファイルを読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+
+
+	</head>
+<!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+
+	<body>
+    	<div class="wrapper">
+			<!-- ナビゲーションメニュー -->
+            <nav>
+				<ul class="main-nav font-english">
+					<!-- ホームへのリンク -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- 制作実績ページへのリンク -->
+                    <li><a href="works.html">Works</a></li>
+                    <!-- ブログページへのリンク -->
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+             </nav>
+
+        <h1 class="blogpage-title">Java</h1>
+        
+<!-- ―――――――――――――― 本文 ―――――――――――――― -->
+
+        <div class="container">
+
+            <!-- 左側：学習内容 -->
+            <main class="content">
+
+                <section id="java" class="study-section">
+
+                    <h2>Java</h2>
+
+						<h3>Javaの基本構文</h3>
+						
+						<p>
+						    :contentReference[oaicite:0]{index=0} はオブジェクト指向プログラミング言語で、
+						    Webアプリ、業務システム、Android開発など幅広く使われる。
+						    クラスを中心に構造を作るのが特徴である。
+						</p>
+						
+						<pre>
+						&lt;-- 基本的なプログラム構造 --&gt;
+						public class Main {
+						    public static void main(String[] args) {
+						        System.out.println("Hello Java");
+						    }
+						}
+						
+						&lt;-- 変数の宣言 --&gt;
+						int number = 10;
+						String text = "こんにちは";
+						
+						&lt;-- 条件分岐 --&gt;
+						if (number > 5) {
+						    System.out.println("5より大きい");
+						} else {
+						    System.out.println("5以下");
+						}
+						
+						&lt;-- 繰り返し（for文） --&gt;
+						for (int i = 0; i < 5; i++) {
+						    System.out.println(i);
+						}
+						
+						&lt;-- メソッド定義 --&gt;
+						public static int add(int a, int b) {
+						    return a + b;
+						}
+						</pre>
+						
+						<p>
+						    Javaは「クラス」と「メソッド」を基本単位として構成される。
+						    変数・条件分岐・繰り返しを組み合わせて処理を記述する。
+						</p>
+						
+						<pre>
+						&lt;-- オブジェクト指向の基本 --&gt;
+						class Person {
+						    String name;
+						
+						    void greet() {
+						        System.out.println("Hello " + name);
+						    }
+						}
+						
+						Person p = new Person();
+						p.name = "Taro";
+						p.greet();
+						</pre>
+                </section>
+
+            </main>
+            
+            
+<!-- ―――――――――――――― 目次ー ―――――――――――――― -->
+            <!-- 右側：目次 -->
+            <aside class="sidebar">
+
+                <h2>目次</h2>
+
+                <ul>
+                    <li><a href="#java">Java(タイトル)</a></li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </div>
+<!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+	</body>
+
+</html>

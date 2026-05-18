@@ -1,0 +1,221 @@
+<!doctype html>
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML / CSS 学習記録</title>
+        
+	    <meta
+			name="description"
+			content="HTML / CSS の学習内容をまとめたページです。"
+			 />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/ress/dist/ress.min.css"
+			/>
+			
+		        <!-- 自作CSSファイルを読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+
+
+	</head>
+<!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+
+	<body>
+    	<div class="wrapper">
+			<!-- ナビゲーションメニュー -->
+            <nav>
+				<ul class="main-nav font-english">
+					<!-- ホームへのリンク -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- 制作実績ページへのリンク -->
+                    <li><a href="works.html">Works</a></li>
+                    <!-- ブログページへのリンク -->
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+             </nav>
+
+        <h1 class="blogpage-title">HTML / CSS</h1>
+        
+<!-- ―――――――――――――― 本文 ―――――――――――――― -->
+
+        <div class="container">
+
+            <!-- 左側：学習内容 -->
+            <main class="content">
+
+                <section id="html" class="study-section">
+
+                    <h2>HTML</h2>
+
+						<h3>HTMLの基本</h3>
+						
+						<p>
+						    :contentReference[oaicite:0]{index=0} はWebページの構造を作るための言語で、
+						    見出し・段落・リンク・画像などの要素を記述する。
+						</p>
+						
+						<pre>
+						&lt;-- 基本構造 --&gt;
+						&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+						&lt;head&gt;
+						    &lt;title&gt;ページタイトル&lt;/title&gt;
+						&lt;/head&gt;
+						&lt;body&gt;
+						
+						    &lt;h1&gt;見出し&lt;/h1&gt;
+						    &lt;p&gt;これは段落です&lt;/p&gt;
+						
+						&lt;/body&gt;
+						&lt;/html&gt;
+						
+						&lt;-- よく使うタグ --&gt;
+						&lt;p&gt;段落&lt;/p&gt;
+						&lt;a href="https://example.com"&gt;リンク&lt;/a&gt;
+						&lt;img src="image.jpg" alt="画像"&gt;
+						&lt;div&gt;ブロック要素&lt;/div&gt;
+						&lt;span&gt;インライン要素&lt;/span&gt;
+						</pre>
+						
+				<header>
+                    <h2 class="post-title">HTML / CSS基礎学習</h2>
+                    <div class="post-info">
+                        <time class="post-date" datetime="2026-05-14"
+                            >2026年5月16日</time>
+                    </div>
+                </header>
+
+                <p>
+					<ul>
+						<li>HTML には様々なバージョンが存在するため、どのバージョンの HTML として Web ブラウザに読み込んで欲しいのかを、「文書型宣言（DOCTYPE 宣言）」で指定する。
+							【HTML5】 は&lt;!DOCTYPE html&gt; <br>
+						<li>Web ページにもタイトルを必ずつける必要がある。HTML でタイトルを付けるには&lt;title&gt;タグを使用する。<br>
+						<li>URL とは「Uniform Resource Locator」の略であり、インターネット上のデータを特定してアクセスするための表記。
+							（プロトコル＋ドメイン名＋ポート番号＋フォルダ名＋ファイル名）<br>
+						<img
+		                    class="post-thumbnail"
+		                    src="images/protocol-table.png"
+		                    alt="プロトコル表"
+		                />
+		                <li>画面の中で特定の画像（image）を表示させたい場合は、&lt;img&gt;タグには表示したい画像を示す src 属性が必要になる。また、仕様上必須ではないが基本的に、
+							画像の内容を説明するための alt 属性も記述する。src 属性に表示したい画像ファイルの名前をファイルの場所（パス）と供に記述する。
+						<li>target 属性はリンクをクリックした際の挙動を制御する属性で、リンクを別のタブで開きたいときに使用する。
+						<li>「相対パス」 … パスが記述されたファイルから見て、パスで指定した先のファイルがどこにあるのかを記す。
+		                <li>「絶対パス」 … URL をそのまま貼り付けてファイル位置を記す。
+					</ul>
+				 </p>
+				 <p>	
+					<strong>&lt;html&gt;</strong> … HTML文書全体を囲む。ページ全体を囲んで HTML 文書であることを指定する最上位の要素。<br> 
+					<strong>&lt;head&gt;</strong> … 画面には表示されない付加的な情報（メタデータ）を記述する。<br>
+					<strong>&lt;body&gt;</strong> … 画面に表示されるページの内容を記述する。<br>
+					<strong>&lt;meta&gt;</strong> … メタ情報を定義するタグ。すでに学んだ文字コードの指定以外にも検索ワード対策（通称 SEO）に大きく影響を及ぼす属性も多い。<br>
+					<strong>ブロック要素】</strong><br>
+					<strong>&lt;p&gt;</strong> … 画面の中で文章のまとまり＝段落（paragraph）を表す。&lt;p&gt;タグによって段落が指定された場合、その次に続く記述は改行された
+													 状態で始まる、<strong>ブロック要素</strong>を持つ。<br>
+					<strong>&lt;h1&gt;～&lt;h6&gt;</strong> … 見出しを表す際に使用。見出しレベルの数字が低いほど重要度が増す。<br>				 
+					<strong>&lt;ul&gt;</strong> … 「・」による箇条書きを行う。<br>
+					<strong>&lt;ol&gt;</strong> … 番号付きの箇条書きを行う。<br>
+					<strong>【インライン要素】</strong><br>
+					<strong>&lt;br&gt;</strong> … 改行（line break）。開始タグと終了タグが存在せず単独で完結するという特徴を持つ。このようなタグは空要素と呼ばれる。なお、
+													改行タグは文字として扱われ、<strong>インライン要素</strong>と呼ばれる。<br>	
+					<strong>&lt;a&gt;</strong> … リンク設置用のタグ。船の錨を意味する anchor の頭文字を抜粋したタグ。&lt;a&gt;タグ単体ではリンクは機能せず、<strong>href 属性の
+													値に遷移先を指定</strong>することで、はじめてリンク機能を持つことができます。また、遷移先の指定には絶対パスと相対パスという
+													 2 通りの方法がある。<br>								
+				</p>
+						
+                </section>
+                
+                    <!-- CSS学習 -->
+				<section id="css" class="study-section">
+				
+				    <h2>CSS</h2>
+				
+						<h3>CSSの基本</h3>
+						
+						<p>
+						    :contentReference[oaicite:1]{index=1} はHTMLにデザインを適用するための言語で、
+						    文字色・余白・レイアウトなど見た目を制御する。
+						</p>
+						
+						<pre>
+						&lt;-- 基本の書き方 --&gt;
+						h1 {
+						    color: red;
+						    font-size: 24px;
+						}
+						
+						p {
+						    color: #333;
+						    line-height: 1.6;
+						}
+						
+						&lt;-- クラス指定 --&gt;
+						.title {
+						    font-weight: bold;
+						    margin-bottom: 10px;
+						}
+						
+						&lt;-- ID指定 --&gt;
+						#main {
+						    width: 100%;
+						    padding: 20px;
+						}
+						
+						&lt;-- ボックスモデル --&gt;
+						.box {
+						    margin: 10px;
+						    padding: 20px;
+						    border: 1px solid #000;
+						}
+						</pre>
+				
+				</section>
+
+            </main>
+            
+            
+<!-- ―――――――――――――― 目次ー ―――――――――――――― -->
+            <!-- 右側：目次 -->
+            <aside class="sidebar">
+
+                <h2>目次</h2>
+
+                <ul>
+                    <li><a href="#html">HTML(タイトル)</a></li>
+					<li><a href="#css">CSS(タイトル)</a></li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </div>
+<!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+	</body>
+
+</html>

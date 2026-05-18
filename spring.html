@@ -1,0 +1,158 @@
+<!doctype html>
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>Spring 学習記録</title>
+        
+	    <meta
+			name="description"
+			content="Spring の学習内容をまとめたページです。"
+			 />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/ress/dist/ress.min.css"
+			/>
+			
+		        <!-- 自作CSSファイルを読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+
+
+	</head>
+<!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+
+	<body>
+    	<div class="wrapper">
+			<!-- ナビゲーションメニュー -->
+            <nav>
+				<ul class="main-nav font-english">
+					<!-- ホームへのリンク -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- 制作実績ページへのリンク -->
+                    <li><a href="works.html">Works</a></li>
+                    <!-- ブログページへのリンク -->
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+             </nav>
+
+        <h1 class="blogpage-title">Spring</h1>
+        
+<!-- ―――――――――――――― 本文 ―――――――――――――― -->
+
+        <div class="container">
+
+            <!-- 左側：学習内容 -->
+            <main class="content">
+
+                <section id="Spring" class="study-section">
+
+                    <h2>Spring</h2>
+
+						<h3>Springの基本構成とアノテーション</h3>
+						
+						<p>
+						    :contentReference[oaicite:0]{index=0} はJavaでよく使われるフレームワークで、
+						    特に :contentReference[oaicite:1]{index=1} を使うことで簡単にWebアプリを開発できる。
+						    主にDI（依存性注入）とアノテーションベースの開発が特徴である。
+						</p>
+						
+						<pre>
+						&lt;-- 依存性注入（DI） --&gt;
+						@Component
+						class SampleService {
+						    public void hello() {
+						        System.out.println("Hello Spring");
+						    }
+						}
+						
+						&lt;-- Controller（画面やAPIの入口） --&gt;
+						@RestController
+						@RequestMapping("/api")
+						class SampleController {
+						
+						    private final SampleService service;
+						
+						    public SampleController(SampleService service) {
+						        this.service = service;
+						    }
+						
+						    @GetMapping("/hello")
+						    public String hello() {
+						        return service.hello();
+						    }
+						}
+						
+						&lt;-- Service（ビジネスロジック） --&gt;
+						@Service
+						class SampleService {
+						    public String hello() {
+						        return "Hello Spring";
+						    }
+						}
+						</pre>
+						
+						<p>
+						    Springでは、役割ごとにクラスを分けることで保守性を高める。
+						    また、アノテーションを付けることでSpringが自動的に管理（DI）を行う。
+						</p>
+						
+						<pre>
+						&lt;-- よく使うアノテーション --&gt;
+						@Component      // 一般的なコンポーネント
+						@Service        // ビジネスロジック層
+						@Repository     // データアクセス層
+						@RestController // REST API用コントローラ
+						@RequestMapping // URLルーティング
+						@GetMapping     // GETリクエスト
+						@PostMapping    // POSTリクエスト
+						</pre>
+						```
+                </section>
+     
+
+            </main>
+            
+            
+<!-- ―――――――――――――― 目次ー ―――――――――――――― -->
+            <!-- 右側：目次 -->
+            <aside class="sidebar">
+
+                <h2>目次</h2>
+
+                <ul>
+                    <li><a href="#Spring">Spring(タイトル)</a></li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </div>
+<!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+	</body>
+
+</html>

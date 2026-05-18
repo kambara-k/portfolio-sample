@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Blog - My Portfolio</title>
+        <meta name="description" content="技術ブログや日々の学習の記録" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/ress/dist/ress.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+ <!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+    <body>
+        <div class="sub-cover cover-blog">
+            <header class="page-header wrapper">
+                <h1 class="align-center">
+                    <a href="index.html" class="logo-text font-english"
+                        >My Portfolio</a
+                    >
+                </h1>
+                <nav>
+                    <ul class="main-nav font-english">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h2 class="page-title font-english">Blog</h2>
+        </div>
+ <!-- ――――――――――――――― 本文 ――――――――――――――― -->
+        <main class="wrapper blog-contents">
+            <article class="post">
+                <header>
+                    <h2 class="post-title">HTML / CSS基礎学習</h2>
+                    <div class="post-info">
+                        <time class="post-date" datetime="2026-05-14"
+                            >2026年5月16日</time>
+                    </div>
+                </header>
+
+                <p>
+					<ul>
+						<li>HTML には様々なバージョンが存在するため、どのバージョンの HTML として Web ブラウザに読み込んで欲しいのかを、「文書型宣言（DOCTYPE 宣言）」で指定する。
+							【HTML5】 は&lt;!DOCTYPE html&gt; <br>
+						<li>Web ページにもタイトルを必ずつける必要がある。HTML でタイトルを付けるには&lt;title&gt;タグを使用する。<br>
+						<li>URL とは「Uniform Resource Locator」の略であり、インターネット上のデータを特定してアクセスするための表記。
+							（プロトコル＋ドメイン名＋ポート番号＋フォルダ名＋ファイル名）<br>
+						<img
+		                    class="post-thumbnail"
+		                    src="images/protocol-table.png"
+		                    alt="プロトコル表"
+		                />
+		                <li>画面の中で特定の画像（image）を表示させたい場合は、&lt;img&gt;タグには表示したい画像を示す src 属性が必要になる。また、仕様上必須ではないが基本的に、
+							画像の内容を説明するための alt 属性も記述する。src 属性に表示したい画像ファイルの名前をファイルの場所（パス）と供に記述する。
+						<li>target 属性はリンクをクリックした際の挙動を制御する属性で、リンクを別のタブで開きたいときに使用する。
+						<li>「相対パス」 … パスが記述されたファイルから見て、パスで指定した先のファイルがどこにあるのかを記す。
+		                <li>「絶対パス」 … URL をそのまま貼り付けてファイル位置を記す。
+					</ul>
+				 </p>
+				 <p>	
+					<strong>&lt;html&gt;</strong> … HTML文書全体を囲む。ページ全体を囲んで HTML 文書であることを指定する最上位の要素。<br> 
+					<strong>&lt;head&gt;</strong> … 画面には表示されない付加的な情報（メタデータ）を記述する。<br>
+					<strong>&lt;body&gt;</strong> … 画面に表示されるページの内容を記述する。<br>
+					<strong>&lt;meta&gt;</strong> … メタ情報を定義するタグ。すでに学んだ文字コードの指定以外にも検索ワード対策（通称 SEO）に大きく影響を及ぼす属性も多い。<br>
+					<strong>ブロック要素】</strong><br>
+					<strong>&lt;p&gt;</strong> … 画面の中で文章のまとまり＝段落（paragraph）を表す。&lt;p&gt;タグによって段落が指定された場合、その次に続く記述は改行された
+													 状態で始まる、<strong>ブロック要素</strong>を持つ。<br>
+					<strong>&lt;h1&gt;～&lt;h6&gt;</strong> … 見出しを表す際に使用。見出しレベルの数字が低いほど重要度が増す。<br>				 
+					<strong>&lt;ul&gt;</strong> … 「・」による箇条書きを行う。<br>
+					<strong>&lt;ol&gt;</strong> … 番号付きの箇条書きを行う。<br>
+					<strong>【インライン要素】</strong><br>
+					<strong>&lt;br&gt;</strong> … 改行（line break）。開始タグと終了タグが存在せず単独で完結するという特徴を持つ。このようなタグは空要素と呼ばれる。なお、
+													改行タグは文字として扱われ、<strong>インライン要素</strong>と呼ばれる。<br>	
+					<strong>&lt;a&gt;</strong> … リンク設置用のタグ。船の錨を意味する anchor の頭文字を抜粋したタグ。&lt;a&gt;タグ単体ではリンクは機能せず、<strong>href 属性の
+													値に遷移先を指定</strong>することで、はじめてリンク機能を持つことができます。また、遷移先の指定には絶対パスと相対パスという
+													 2 通りの方法がある。<br>								
+				</p>
+                
+                <header>
+                    <h2 class="post-title">ポートフォリオ制作学習</h2>
+                    <div class="post-info">
+                        <time class="post-date" datetime="2026-05-14"
+                            >2026年5月17日</time>
+                    </div>
+                </header>
+                <img
+                    class="post-thumbnail"
+                    src="images/codeing-1.png"
+                    alt="コーディング画面"
+                />
+                <p>ページ作成時、様々なことを定義する必要があることを学んだ。</p>
+                
+            </article>
+ <!-- ――――――――――――――― 目次 ――――――――――――――― -->
+            <aside class="sidebar">
+                <h2 class="font-english">Category</h2>
+                <ul>
+                    <li><a href="java.html">Java</a></li>
+                    <li><a href="sql.html">SQL</a></li>
+                    <li><a href="html-css.html">HTML/CSS</a></li>
+                    <li><a href="spring.html">Spring</a></li>
+                </ul>
+            </aside>
+        </main>
+
+ <!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+	</body>
+
+</html>

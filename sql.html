@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<title>SQL 学習記録</title>
+        
+	    <meta
+			name="description"
+			content="SQL の学習内容をまとめたページです。"
+			 />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/ress/dist/ress.min.css"
+			/>
+			
+		        <!-- 自作CSSファイルを読み込み -->
+        <link rel="stylesheet" href="css/style.css" />
+
+
+	</head>
+<!-- ―――――――――――――― ヘッダー ―――――――――――――― -->
+
+	<body>
+    	<div class="wrapper">
+			<!-- ナビゲーションメニュー -->
+            <nav>
+				<ul class="main-nav font-english">
+					<!-- ホームへのリンク -->
+                    <li><a href="index.html">Home</a></li>
+                    <!-- 制作実績ページへのリンク -->
+                    <li><a href="works.html">Works</a></li>
+                    <!-- ブログページへのリンク -->
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+             </nav>
+
+        <h1 class="blogpage-title">SQL</h1>
+        
+<!-- ―――――――――――――― 本文 ―――――――――――――― -->
+
+        <div class="container">
+
+            <!-- 左側：学習内容 -->
+            <main class="content">
+
+                <section id="SQL" class="study-section">
+
+                    <h2>SQL</h2>
+
+						<h3>Oracle SQLの基本コマンド</h3>
+						
+						<p>
+						    Oracle SQLでは、基本的なデータ操作として
+						    <code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>などを使用する。
+						</p>
+						
+						<pre>
+						&lt;-- データ取得（検索） --&gt;
+						SELECT * FROM テーブル名;
+						
+						&lt;-- 条件付き検索 --&gt;
+						SELECT * FROM テーブル名
+						WHERE 列名 = '値';
+						
+						&lt;-- 並び替え --&gt;
+						SELECT * FROM テーブル名
+						ORDER BY 列名 ASC;
+						
+						&lt;-- データ追加 --&gt;
+						INSERT INTO テーブル名 (列1, 列2)
+						VALUES ('値1', '値2');
+						
+						&lt;-- データ更新 --&gt;
+						UPDATE テーブル名
+						SET 列1 = '値'
+						WHERE 条件;
+						
+						&lt;-- データ削除 --&gt;
+						DELETE FROM テーブル名
+						WHERE 条件;
+						
+						&lt;-- テーブル作成 --&gt;
+						CREATE TABLE テーブル名 (
+						    列1 データ型,
+						    列2 データ型
+						);
+						</pre>
+						
+						<p>
+						    さらに重要な応用として、複数テーブルの結合や集計処理もよく使われる。
+						</p>
+						
+						<pre>
+						&lt;-- テーブル結合（JOIN） --&gt;
+						SELECT *
+						FROM テーブルA
+						JOIN テーブルB
+						ON テーブルA.id = テーブルB.id;
+						
+						&lt;-- 集計（GROUP BY） --&gt;
+						SELECT 列名, COUNT(*)
+						FROM テーブル名
+						GROUP BY 列名;
+						</pre>
+                </section>
+
+            </main>
+            
+            
+<!-- ―――――――――――――― 目次ー ―――――――――――――― -->
+            <!-- 右側：目次 -->
+            <aside class="sidebar">
+
+                <h2>目次</h2>
+
+                <ul>
+                    <li><a href="#SQL">SQL(タイトル)</a></li>
+                </ul>
+
+            </aside>
+
+        </div>
+
+    </div>
+<!-- ―――――――――――――― フッター ―――――――――――――― -->
+		<!-- フッター -->
+        <footer class="page-footer">
+			
+			<!-- フッター見出し -->
+            <h3 class="heading-large font-english">Contact & Info</h3>
+            
+            <!-- 連絡先情報テーブル -->
+            <table class="info">
+                
+                <!-- GitHubリンク -->
+                <tr>
+                    <th>GitHub</th>
+                    <td><a href="https://github.com/kambara-k">@kambara_k</a></td>
+                </tr>
+            </table>
+            
+            <!-- コピーライト表記 -->
+            <div class="copyright">
+                <small>&copy; 2026 My Portfolio</small>
+            </div>
+        </footer>
+	</body>
+
+</html>
