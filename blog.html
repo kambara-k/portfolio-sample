@@ -39,7 +39,7 @@
  <!-- ――――――――――――――― 本文 ――――――――――――――― -->
         <main class="wrapper blog-contents">
             <article class="post">
-                <header>
+				<header>
                     <h2 class="post-title">HTML / CSS基礎学習</h2>
                     <div class="post-info">
                         <time class="post-date" datetime="2026-05-14"
@@ -64,26 +64,204 @@
 						<li>target 属性はリンクをクリックした際の挙動を制御する属性で、リンクを別のタブで開きたいときに使用する。
 						<li>「相対パス」 … パスが記述されたファイルから見て、パスで指定した先のファイルがどこにあるのかを記す。
 		                <li>「絶対パス」 … URL をそのまま貼り付けてファイル位置を記す。
+						<li>ブロック要素には、文書の構造を決めるタグが分類される。<br>
+							いくつかにグループを分割（division）してレイアウト調整を行う際に必ず登場するのが&lt;div&gt;タグ
+						<li>インライン要素には、テキスト、画像関連、リンクのタグが分類される。
 					</ul>
 				 </p>
+				 
+				 <p>
+					<h3>フォーム</h3>
+					<ul>
+						<li>フォームは、クライアントから Web サーバへ情報を送信するための機能	 
+					 	<li>フォームを作成するには、まずは&lt;form&gt;タグを使用して、Web サーバにデータを送信するためのフォーム領域を作成する必要がある。<br>
+					 		なお、&lt;form&gt;タグには入力値の送信先を設定する機能があるため、このタグがないと、入力項目が機能しない。
+					 	<li>&lt;form&gt;タグは、action属性で指定されたURLに各コントロールの入力値を送信する。また、入力値の送信方法は method 属性で指定する。<br>
+					 	<img
+		                    class="post-thumbnail"
+		                    src="images/html-form.png"
+		                    alt="フォームタグ表"
+		                />
+					 	<li>画面上の入力項目のことを「入力コントロール」と呼ぶ。コントロールを作成する各要素には、共通して name 属性と value 属性という 2 種類の重要な属性が
+							 あり、これらの属性によりプログラムはサイト閲覧者の入力情報を取得できる。<br>
+							 入力した値を識別するための名前＝name属性・最初からデータを表示する＝value属性<br>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/html-control.png"
+		                    alt="コントロールタグ表"
+		                	/>
+					</ul>
+				 </p>
+				 
 				 <p>	
 					<strong>&lt;html&gt;</strong> … HTML文書全体を囲む。ページ全体を囲んで HTML 文書であることを指定する最上位の要素。<br> 
 					<strong>&lt;head&gt;</strong> … 画面には表示されない付加的な情報（メタデータ）を記述する。<br>
 					<strong>&lt;body&gt;</strong> … 画面に表示されるページの内容を記述する。<br>
 					<strong>&lt;meta&gt;</strong> … メタ情報を定義するタグ。すでに学んだ文字コードの指定以外にも検索ワード対策（通称 SEO）に大きく影響を及ぼす属性も多い。<br>
-					<strong>ブロック要素】</strong><br>
+					<strong>【ブロック要素】</strong><br>
 					<strong>&lt;p&gt;</strong> … 画面の中で文章のまとまり＝段落（paragraph）を表す。&lt;p&gt;タグによって段落が指定された場合、その次に続く記述は改行された
 													 状態で始まる、<strong>ブロック要素</strong>を持つ。<br>
 					<strong>&lt;h1&gt;～&lt;h6&gt;</strong> … 見出しを表す際に使用。見出しレベルの数字が低いほど重要度が増す。<br>				 
 					<strong>&lt;ul&gt;</strong> … 「・」による箇条書きを行う。<br>
 					<strong>&lt;ol&gt;</strong> … 番号付きの箇条書きを行う。<br>
+					<strong>&lt;table&gt;</strong> … 表組み(table)を作成するタグ。親子関係は&lt;table&gt; → &lt;tr&gt; → &lt;td&gt;(&lt;th&gt;)と決まっており、順番を入れ替えることはできない。<br> 								 
+					<strong>&lt;tr&gt;</strong> … 横一行（table row）を表すタグ。<br>
+					<strong>&lt;td&gt;</strong> … 各セル（table data）を表すタグです。必ず&lt;tr&gt;タグの子要素として記述される必要があり、表組みに行が 1 つしかない場合でも、&lt;tr&gt;タグを省略
+													して&lt;td&gt;タグのみを記述することはできない。同一テーブル内のすべての&lt;tr&gt;は、内包される&lt;td&gt;と&lt;th&gt;の合計数が同じでなければいけない。
+													また、colspan 属性（左右）や rowspan 属性（上下）を使うと、複数のセルを結合できる。<br>
+					<strong>&lt;th&gt;</strong> … 見出しセル（table header）であることを意味するタグ。標準では太字かつ中央揃えで表示される。
 					<strong>【インライン要素】</strong><br>
 					<strong>&lt;br&gt;</strong> … 改行（line break）。開始タグと終了タグが存在せず単独で完結するという特徴を持つ。このようなタグは空要素と呼ばれる。なお、
 													改行タグは文字として扱われ、<strong>インライン要素</strong>と呼ばれる。<br>	
+					<strong>&lt;img&gt;</strong> …  画像を表示するタグで src 属性とセットで扱う。src="ファイルパス" 、alt="画像の説明" 、width="横幅" 、height="高さ"	<br>							
 					<strong>&lt;a&gt;</strong> … リンク設置用のタグ。船の錨を意味する anchor の頭文字を抜粋したタグ。&lt;a&gt;タグ単体ではリンクは機能せず、<strong>href 属性の
-													値に遷移先を指定</strong>することで、はじめてリンク機能を持つことができます。また、遷移先の指定には絶対パスと相対パスという
-													 2 通りの方法がある。<br>								
+													値に遷移先を指定</strong>することで、はじめてリンク機能を持つことができる。また、遷移先の指定には絶対パスと相対パスという
+													 2 通りの方法がある。target 属性は属性値に<strong>"_blank"</strong>を指定することでリンク時に別タブでリンク先を表示することができるため、外部
+													 サイトへのリンクなど、遷移後も自分自身を表示させておきたいときに有効。<br>
+													 ※ href の属性値に "#id 名"を記述することで同じ名前の id を持つ要素へとページ内リンクさせることもできる。 ちなみに、id 名を省略して#のみを記述
+													 すると そのページの最上部へリンクさせることもできる。<br>
+					<strong>&lt;input&gt;</strong> … フォームのコントロールを作成するための要素。name属性と value 属性の他に、<strong>type 属性</strong>を指定できることが特徴で、コントロールの種類を指定できる。 
+														type 属性の値が reset、submit、button の場合、value 属性の値はボタン上に表記される文言となる。また、type 属性の値が radio、または checkbox のコントロール
+														で、選択肢を複数用意したい場合、各コントロールの name 属性には同一の値を指定する。<br>
+					<strong>&lt;textarea&gt;</strong> … 複数行入力できるテキストボックス（テキストエリア）を作成するための要素。コントロールの大きさは <strong>cols 属性(横幅)</strong>と <strong>rows 属性(高さ)</strong>
+														によって決まり、それぞれ文字数と行数で指定します。このコントロールには value 属性は無いが、初期値は要素の内容で決めることができる。<br>
+					<strong>&lt;select&gt;</strong> … ドロップダウンリストを作成するためのタグ。選択肢は子要素の&lt;option&gt;タグで記述。name 属性は指定できますが、value 属性は&lt;option&gt;タグで指定する。<br>
+					<strong>&lt;option&gt;</strong> … ドロップダウンリストの選択肢を作成するもので、&lt;select&gt;タグの子要素として記述する。value 属性には、プログラムに送信される値（送信値）を指定する。<br>
+					<strong>&lt;label&gt;</strong> … フォームの入力欄（コントロール）に対して説明を付ける目的で使用。なお、使わなくても説明は書ける。<br>																
+							<img
+		                    class="post-thumbnail"
+		                    src="images/html-label1.png"
+		                    alt="lavel例1"
+		                	/>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/html-label2.png"
+		                    alt="lavel例2"
+		                	/>
 				</p>
+				
+				                <p>
+					<ul>
+						<li><strong>CSS（Cascading Style Sheets）</strong>は HTML で構築された画面の要素を操作して、文書の体裁や見た目を整えるために用いられる言語<br>
+						<img
+		                    class="post-thumbnail"
+		                    src="images/css-basic.png"
+		                    alt="基本構文"
+		                />
+		                <li>① セレクタ…どこに対してデザインを施すかを指定、② プロパティ…セレクタで指定した対象に対して何を操作するかを指定、③ 値…、フォントサイズ
+							、文字の色などの各プロパティに対してどうするかを指定する。<br>
+						<li>CSS を記述することのできる場所をまとめると全部で以下の 3 通り。<br> 
+							1. HTML の要素に style 属性を使う<br> 
+							2. &lt;head&gt;内に&lt;style&gt;要素を記述<br>
+							3. CSS ファイルを作成し HTML から読み込む<br>
+						<li>1. HTML の要素に style 属性を使う（インラインスタイル）<br>
+							HTML タグに style 属性を付与し、直接 CSS を付与する。影響範囲は記述したそのタグのみ。<br>		
+						<li>2. HTML の style 要素を使う（内部参照）<br>
+							&lt;style&gt;タグを記述しその中に記述。&lt;style&gt;タグは&lt;head&gt;タグ内に記述。記述されたページ全体に影響する。<br>
+						<li>3. CSS ファイルを作成し HTML から読み込む。（外部参照）<br>
+							CSS ファイル（.css）を外部ファイルとして扱い &lt;link&gt;要素を利用して埋め込むことで、同一の CSS が適用される。なお、外部参照は複数の属性も指定できる<br>
+						</li>
+					</ul>
+				 </p>
+				 
+				 <p>
+					 <h3>セレクタ</h3>
+					 <ul>
+						<li><strong>①タイプセレクタ</strong><br>
+							HTML のタグを直接指定し、同じ種類のタグはその画面の中で同じデザインになる。しかし、適用範囲が広く、使い勝手がいいとは言えない。使いどころは、
+							各ブラウザで設定が異なる HTML の初期設定を均一化させる場合（リセット CSS）、文字のリンク色のように全ページ必ず共通でなければいけない部分がある場合に利用する。<br>
+						<li><strong>②class セレクタ</strong><br>
+							同じデザインを複数の要素で使いまわしたいときや、特定の要素を指定してデザインを当てたいときに便利な指定方法で、もっとも利用頻度が高い記述方法です。<strong>HTML のタグ
+							の中に class 属性を記述</strong>し、その値を目印として CSS 側からデザインを指定します。CSS 内では、<strong>[.（ピリオド）class 名]をセレクタ</strong>として使用する。
+							class 属性と id 属性は、各要素に任意の名前をつけるための属性。なお、[要素.class 名]で記述したときと[.class 名]で記述した時に違いがある。<br>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/css-selector.png"
+		                    alt="クラスセレクタ"
+		                	/>
+		                	<strong>[p.f_small]は、厳密にいうとタイプセレクタ＋class セレクタ</strong>の合わせ技になり、<strong>&lt;p&gt;タグに f_small クラスが付与されている場合のみが条件に当てはまる。</strong>
+							したがって&lt;h2&gt;など&lt;p&gt;以外の要素に[f_small]のデザインが適用されなくなる。タイプセレクタを指定しない[f_large]は、どんな要素であろうが[class="f_large"]
+							の記述さえあればデザインが適用される。また、ひとつの class 属性の属性値に複数の class を組み合わせることができる。<br>
+						<li><strong>③ID セレクタ</strong><br>
+							基本的にはクラスセレクタと同じ働きをするが、クラスセレクタと違い、<strong>同じ ID セレクタは 1 つの HTML ファイル内で１つまでしか指定できない</strong>という機能制限がある。
+							使いどころはページ内で 2 つ以上登場しない大きなブロックの内容をまとめたいときに利用する。CSS 内では、[#ID 名]をセレクタとして使う。<br>
+						<li><strong>④その他のセレクタ</strong><br>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/css-selector-an.png"
+		                    alt="その他のセレクタ"
+		                	/><br>
+						<li><strong>プロパティが競合した場合はあとで書いた方の CSS が先に読まれた CSS を上書き</strong>する。
+							なお、実際には各セレクタが持つ詳細度というポイントがあり、競合時にポイント計算され高い方が優先されるというルールがある。(!important（10000:例外）)
+						</li>
+					</ul>
+				 </p>
+				 
+				 <p>
+					 <h3>プロパティ</h3>
+					 <ul>
+						<li><strong>文字装飾</strong><br>
+							色の指定は次のような 6 ケタの 16 進数で表現され、この 6 ケタをカラーコード、または”Hex（hexadecimal）値”と呼ぶ。<br>
+							数値は各光源の出力度合いを示しており、数値が低いほど光の出力も低くなり色合いは暗くなり、数値が高くなるほど色合いが明るくなる。各色が最大まで出力されると白（#ffffff）になる。<br>
+							スタイルシートには文字の色を指定するプロパティ color が用意されて
+						<li><strong>文字の太さの指定</strong><br>
+							 文字を太文字にするには <strong>font-weight プロパティ</strong>に <strong>bold を指定</strong>する<br>
+							 &lt;h1&gt;や&lt;th&gt;など一部の要素はデフォルトプロパティで太字が設定されていますが、これらの要素に対して太字を適用したくない場合には、font-weight プロパティに normal を指定することで、
+							太字設定を打ち消し、通常の太さを反映させることができ
+						<li><strong>文字列に下線を引く</strong><br>
+							文章に線を引く場合は text-decoration プロパティを使い、値には underline を使用する。リンクを示す&lt;a&gt;要素には初期値で underline が適用されていますが、デザインの都合上、下線を
+							表示したくない場合には&lt;a&gt;要素に対して text-decoration:none;を付与<br>
+						<li><strong>文字の表示位置を指定</strong><br>
+							<strong>text-align プロパティ</strong>では値にそれぞれ left（左揃え）、center（中央揃え）、right（右揃え）を指定できます。<strong>text-align が制御するのはインラインコンテンツ（文字列や画像）のみ</strong>で
+							ブロック要素自体の位置は調整されない。
+						<li><strong>背景装飾</strong><br>
+							要素の背景に装飾をほどこすための、<strong>background プロパティが用意されており、背景色や位置などの一括指定</strong>ができる。色の指定方法のみであれば、background-color プロパティを利用し、
+							color プロパティと同様に 16 進数の値を指定することで設定する<br>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/css-background.png"
+		                    alt="背景装飾"
+		                	/>
+		                	 <strong>background 以降の記述を省略することが可能</strong>。このように特定のプロパティを省略した記法を<strong>ショートハンド</strong>と呼ぶ。
+						<li><strong>プロパティが競合した場合はあとで書いた方の CSS が先に読まれた CSS を上書き</strong>する。
+							なお、実際には各セレクタが持つ詳細度というポイントがあり、競合時にポイント計算され高い方が優先されるというルールがある。(!important（10000:例外）)
+						<li><strong>「マウスカーソルが重なったとき」という条件のときのみ CSS を適用させる:hover</strong> は、リンクを示す a要素と相性が良い。
+						</li>
+					</ul>
+				 </p>
+				 
+				 <p>
+					 <h3>ブロック構造</h3>
+					 <ul>
+						<li><strong>文字装飾</strong><br>
+							色の指定は次のような 6 ケタの 16 進数で表現され、この 6 ケタをカラーコード、または”Hex（hexadecimal）値”と呼ぶ。<br>
+							数値は各光源の出力度合いを示しており、数値が低いほど光の出力も低くなり色合いは暗くなり、数値が高くなるほど色合いが明るくなる。各色が最大まで出力されると白（#ffffff）になる。<br>
+							スタイルシートには文字の色を指定するプロパティ color が用意されて
+						<li><strong>文字の太さの指定</strong><br>
+							 文字を太文字にするには <strong>font-weight プロパティ</strong>に <strong>bold を指定</strong>する<br>
+							 &lt;h1&gt;や&lt;th&gt;など一部の要素はデフォルトプロパティで太字が設定されていますが、これらの要素に対して太字を適用したくない場合には、font-weight プロパティに normal を指定することで、
+							太字設定を打ち消し、通常の太さを反映させることができ
+						<li><strong>文字列に下線を引く</strong><br>
+							文章に線を引く場合は text-decoration プロパティを使い、値には underline を使用する。リンクを示す&lt;a&gt;要素には初期値で underline が適用されていますが、デザインの都合上、下線を
+							表示したくない場合には&lt;a&gt;要素に対して text-decoration:none;を付与<br>
+						<li><strong>文字の表示位置を指定</strong><br>
+							<strong>text-align プロパティ</strong>では値にそれぞれ left（左揃え）、center（中央揃え）、right（右揃え）を指定できます。<strong>text-align が制御するのはインラインコンテンツ（文字列や画像）のみ</strong>で
+							ブロック要素自体の位置は調整されない。
+						<li><strong>背景装飾</strong><br>
+							要素の背景に装飾をほどこすための、<strong>background プロパティが用意されており、背景色や位置などの一括指定</strong>ができる。色の指定方法のみであれば、background-color プロパティを利用し、
+							color プロパティと同様に 16 進数の値を指定することで設定する<br>
+							<img
+		                    class="post-thumbnail"
+		                    src="images/css-background.png"
+		                    alt="背景装飾"
+		                	/>
+		                	 <strong>background 以降の記述を省略することが可能</strong>。このように特定のプロパティを省略した記法を<strong>ショートハンド</strong>と呼ぶ。
+						<li><strong>プロパティが競合した場合はあとで書いた方の CSS が先に読まれた CSS を上書き</strong>する。
+							なお、実際には各セレクタが持つ詳細度というポイントがあり、競合時にポイント計算され高い方が優先されるというルールがある。(!important（10000:例外）)
+						<li><strong>「マウスカーソルが重なったとき」という条件のときのみ CSS を適用させる:hover</strong> は、リンクを示す a要素と相性が良い。
+						</li>
+					</ul>
+				 </p>	
                 
                 <header>
                     <h2 class="post-title">ポートフォリオ制作学習</h2>
